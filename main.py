@@ -11,10 +11,13 @@ st.title('Calculator')
 
 tgt = st.text_input('')
 
+'latex'
 st.latex(tgt)
 
 x = sp.Symbol('x')
 
 f = process_latex.process_sympy(tgt)
 
-st.latex(sp.solve(f, x)[0])
+'sympy'
+st.write(f)
+st.latex(sp.solve(f, x))
